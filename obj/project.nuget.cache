@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "rQ2qRi7el/sgGiGnwh3TX76Hk+WzJnSXn9cYaN8QgZGVl0lGDJydpUnfS5Kn0CfpBXHYoapidz4TmtRjrOuMFQ==",
+  "success": true,
+  "projectFilePath": "/home/aymen/Desktop/Univ/Components based architecture/MiniBank/MiniBank.csproj",
+  "expectedPackageFiles": [
+    "/home/aymen/.nuget/packages/aspectinjector/2.8.0/aspectinjector.2.8.0.nupkg.sha512"
+  ],
+  "logs": []
+}

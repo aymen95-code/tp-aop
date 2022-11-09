@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "AspectInjector/2.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/AspectInjector.Broker.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/AspectInjector.Broker.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/AspectInjector.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AspectInjector/2.8.0": {
+      "sha512": "Bvxd6kRv26LbZirKM+yVE5cvBsFbFqcRcsTs75p6SWuQazq7FtEByiCLvZMfc/GSdxudXCDXagmzOOC+wNOX3g==",
+      "type": "package",
+      "path": "aspectinjector/2.8.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "analyzers/dotnet/cs/AspectInjector.Analyzer.dll",
+        "analyzers/dotnet/cs/AspectInjector.Broker.dll",
+        "analyzers/dotnet/cs/AspectInjector.Rules.dll",
+        "analyzers/dotnet/cs/FluentIL.Common.dll",
+        "aspectinjector.2.8.0.nupkg.sha512",
+        "aspectinjector.nuspec",
+        "build/_bin/linux-arm64/AspectInjector",
+        "build/_bin/linux-musl-arm64/AspectInjector",
+        "build/_bin/linux-musl-x64/AspectInjector",
+        "build/_bin/linux-x64/AspectInjector",
+        "build/_bin/osx-arm64/AspectInjector",
+        "build/_bin/osx-x64/AspectInjector",
+        "build/_bin/win-arm64/AspectInjector.exe",
+        "build/_bin/win-x64/AspectInjector.exe",
+        "build/netstandard2.0/AspectInjector.targets",
+        "buildTransitive/netstandard2.0/AspectInjector.targets",
+        "lib/netstandard2.0/AspectInjector.Broker.dll",
+        "lib/netstandard2.0/AspectInjector.Broker.xml",
+        "package.png",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "AspectInjector >= 2.8.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/aymen/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/aymen/Desktop/Univ/Components based architecture/MiniBank/MiniBank.csproj",
+      "projectName": "MiniBank",
+      "projectPath": "/home/aymen/Desktop/Univ/Components based architecture/MiniBank/MiniBank.csproj",
+      "packagesPath": "/home/aymen/.nuget/packages/",
+      "outputPath": "/home/aymen/Desktop/Univ/Components based architecture/MiniBank/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/aymen/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "AspectInjector": {
+            "target": "Package",
+            "version": "[2.8.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
