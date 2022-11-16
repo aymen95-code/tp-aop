@@ -5,7 +5,7 @@ namespace MiniBank.Core;
 public class BankAccount
 {
     public string Number { get; }
-    public string Owner { get; set; }
+    public AccountOwner Owner { get; set; }
     public decimal Balance
     {
         get
@@ -24,17 +24,16 @@ public class BankAccount
     }
     private List<Transaction> allTransactions = new List<Transaction>();
 
-    public BankAccount(string name, decimal initialBalance)
+    [SecurityAspect]
+    public BankAccount(AccountOwner owner, decimal initialBalance)
     {
-
-        this.Owner = name;
+        this.Owner = owner;
         this.Number = Guid.NewGuid().ToString();
-        MakeDeposit(initialBalance, DateTime.Now, "Initial balance");
-
+        MakeDeposit(initialBalance, DateTime.Now, "Initial balance", owner.Password);
     }
 
     [LogAspect]
-    public void MakeDeposit(decimal amount, DateTime date, string note)
+    public void MakeDeposit(decimal amount, DateTime date, string note, string password)
     {
         if (amount <= 0)
         {
@@ -42,10 +41,12 @@ public class BankAccount
         }
         var deposit = new Transaction(amount, date, note);
         allTransactions.Add(deposit);
+
+        Thread.Sleep(5000);
     }
 
     [LogAspect]
-    public void MakeWithdrawal(decimal amount, DateTime date, string note)
+    public void MakeWithdrawal(decimal amount, DateTime date, string note, string password)
     {
         if (amount <= 0)
         {
@@ -57,5 +58,7 @@ public class BankAccount
         }
         var withdrawal = new Transaction(-amount, date, note);
         allTransactions.Add(withdrawal);
+
+        Thread.Sleep(4360);
     }
 }
