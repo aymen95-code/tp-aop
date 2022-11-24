@@ -1,9 +1,9 @@
 ﻿using MiniBank.Core;
 
 Console.Write("username: ");
-string username = Console.ReadLine();
+var username = Console.ReadLine() ?: string.Empty;
 Console.Write("password: ");
-string password = Console.ReadLine();
+var password = Console.ReadLine() ?: string.Empty;
 
 var user = new AccountOwner {Name = username, Password = password};
 
