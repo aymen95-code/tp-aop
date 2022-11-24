@@ -1,6 +1,11 @@
 ﻿using MiniBank.Core;
 
-var user = new AccountOwner {Name = "Aymen", Password = "test123"};
+Console.Write("username: ");
+string username = Console.ReadLine();
+Console.Write("password: ");
+string password = Console.ReadLine();
+
+var user = new AccountOwner {Name = username, Password = password};
 
 var account = new BankAccount(user, 10_000);
 Console.WriteLine($"Account {account.Number} was created for {account.Owner.Name} with {account.Balance} dinars");
